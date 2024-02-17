@@ -50,3 +50,6 @@ Voila!!
     - service - Fetches conversion rate and calculates the output each upon request
   - test
     - Unit Tests for the application REST API controller
+
+## More
+- Run Unit Tests and build using ```mvn clean install```

@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", function() {
         radioButton.addEventListener("change", toggleDateSelection);
     });
 
+    var today = new Date();
+    var threeMonthsAgo = new Date(today.getFullYear(), today.getMonth() - 2, today.getDate());
+    var formattedDate = threeMonthsAgo.toISOString().slice(0, 10);
+    document.getElementById("date").setAttribute("max", today.toISOString().slice(0, 10));
+    document.getElementById("date").setAttribute("min", formattedDate);
+
     document.getElementById("currenciesConversionForm").addEventListener("submit", function(event) {
         event.preventDefault();
     
